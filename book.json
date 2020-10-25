@@ -1,0 +1,54 @@
+{
+	"title": "学习笔记",
+	"description": "主要是将学习的经历整理成文字，方便以后巩固学习，以免遗忘后再从新找资料学习",
+	"author" : "y442926727",
+	"language": "zh-hans",
+	"plugins": [
+        "code",
+		"-lunr", 
+		"-search", 
+		"search-plus",      
+		"splitter",            
+		"tbfed-pagefooter",   
+		"expandable-chapters-small",
+		"page-treeview",
+		"page-toc-button",
+		"icp"
+	],
+	"pluginsConfig": {
+        "theme-default": {
+	        "showLevel": true
+	    },
+	    "page-treeview": {
+            "copyright": "Copyright &#169; aleen42",
+            "minHeaderCount": "2",
+            "minHeaderDeep": "2"
+        },
+        "tbfed-pagefooter": {
+	        "copyright":"Copyright &copy xiaoyi",
+	        "modify_label": "该文件修订时间：",
+	        "modify_format": "YYYY-MM-DD HH:mm:ss"
+	    },
+        "page-toc-button": {
+            "maxTocDepth": 2,
+            "minTocSize": 2
+           },
+        "icp": {
+            "label": "",
+            "number": "备案号",
+            "link": "http://beian.miit.gov.cn/",
+            "style": {
+              "color":  "#f72b07"
+            }
+        }
+	},
+	"links": {
+		"gitbook": false,
+		"sharing": {
+			"google": false,
+			"facebook": false,
+			"twitter": false,
+			"all": false
+		}
+	}
+}
