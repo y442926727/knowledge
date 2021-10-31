@@ -195,6 +195,17 @@ h6.md-focus:before {
     counter-increment: h6;
     content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "
 }
+
+mark {
+    background: white;
+    color: red;
+    font-weight: bold;
+    border-bottom: 0px solid white;
+    padding: 0.0px;
+    margin: 0 0px;
+  }
+
+::selection { background-color: Lime; color: red;}
 ```
 # gitbook
 
@@ -439,6 +450,19 @@ h5 {counter-reset: h6}
 .markdown-section h4:before {counter-increment: h4; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". "}
 .markdown-section h5:before {counter-increment: h5; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "}
 .markdown-section h6:before {counter-increment: h6; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "}
+
+p {text-indent:2em}  
+
+mark {
+    background: white;
+    color: red;
+    font-weight: bold;
+    border-bottom: 0px solid white;
+    padding: 0.0px;
+    margin: 0 0px;
+  }
+
+::selection { background-color: Lime; color: red;}
 ```
 
 
@@ -469,7 +493,9 @@ h5 {counter-reset: h6}
 
 如果出现类似这样的错误，就删除_book文件夹，重新执行命令即可。
 
+### gitbook install 报错
 
+![image-20211031190000332](index.assets/image-20211031190000332.png)
 
-
+![image-20211031190118478](index.assets/image-20211031190118478.png)
 

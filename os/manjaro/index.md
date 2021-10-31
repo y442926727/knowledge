@@ -1,6 +1,8 @@
 1、下载 汉化包
 `sudo pacman -S firefox-i18n-zh-cn`
+
 2、查看add-ons下的language选项有没有已安装的包
+
 3、在浏览器的地址栏输入`about:config` 搜索`intl.locale.requested` 将其值修改为`zh_CN`
 
 

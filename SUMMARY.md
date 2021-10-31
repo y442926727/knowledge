@@ -1,14 +1,15 @@
 # 目录
 * [序言](README.md)
-* [知识库工具](knowledgecompile/knowledgecompile.md)
+* [知识库工具](knowledgecompile/index.md)
 * [操作系统](os/index.md)
   * [CentOS开发环境](os/centos/index.md)
 * [数据库](database/soar/soar.md)
-  * [MySQL](database/soar/soar.md)
-  * [SOAR](database/soar/soar.md)
+  * [MySQL](database/mysql/db/index.md)
+  * [SOAR](database/mysql/tool/soar/index.md)
 * [软件开发](dev/python/python.md)
-  * [Python开发环境](dev/python/python.md)
-  * [NodeJS开发](dev/nodejs/nodejs.md)
+  * [Python开发环境](dev/python/index.md)
+  * [Java开发环境](dev/java/index.md)
+  * [NodeJS开发](dev/nodejs/index.md)
 * 软件测试
   * Python自动化
   * Jmeter
@@ -18,5 +19,5 @@
 * [CICD](cicd/cicd.md)
   * [Jenkins安装](cicd/jenkins/jenkins.md) 
   * [Net自动构建](cicd/net/net.md) 
-  * [Java自动构建](cicd/java/java.md) 
+  * [Java自动构建](cicd/java/index.md) 
 

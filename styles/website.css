@@ -32,3 +32,13 @@ h5 {counter-reset: h6}
 .markdown-section h5:before {counter-increment: h5; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "}
 .markdown-section h6:before {counter-increment: h6; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "}
 p {text-indent:2em}  
+mark {
+    background: white;
+    color: red;
+    font-weight: bold;
+    border-bottom: 0px solid white;
+    padding: 0.0px;
+    margin: 0 0px;
+  }
+
+::selection { background-color: Lime; color: red;}
