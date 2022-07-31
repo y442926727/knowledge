@@ -2,7 +2,7 @@
 
 主要是个人学习记录
 
-涉及知识范围OS(Linux、Windows等)，DB(MySQL、SQL Server、redis等)，Web(JS、VUE、NodeJS等)、Server Language（Python，Java，Golang）等
+涉及知识范围OS(Linux、Windows等)，DB(MySQL、SQL Server、redis等)，Web(JS、VUE、NodeJS等)、DEV Language（Python，Java，Golang）等
 
 # 前提基础
 

@@ -208,7 +208,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
 use mysql;
 -- 更新 root 用户,允许任何 IP 登录
 update user set host ='%' where user ='root';
--- 授权 root 用户拥有数据服务器所有数据库的所有权限
+-- 授权 root 用户拥有数据服务器所有数据库的所有权限（若执行预计报错，这）
 -- 5.7
 grant all privileges on *.* to 'root'@'%' identified by "root";
 -- 8.0

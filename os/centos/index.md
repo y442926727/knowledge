@@ -37,7 +37,7 @@ CentOS，是基于 Red Hat Linux 提供的可自由使用源代码的企业级 L
 
 我们输入Chinese关键字，选择到中文语言
 
-![语言选择](index.assets/language.png)
+![语言选择](./index.assets/language.png)
 
 务必先将网络打开，因为后续进入系统时，安装软件都需要网络。避免因网络未打开，安装完系统进入后，还手动配置网络。
 
