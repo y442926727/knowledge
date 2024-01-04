@@ -3,6 +3,7 @@
 * [知识库工具](knowledgecompile/index.md)
 * [操作系统](os/index.md)
   * [CentOS开发环境](os/centos/index.md)
+  * [RaspberryPiOS开发环境](os/raspberryos/index.md)
 * [数据库](database/soar/soar.md)
   * [MySQL](database/mysql/db/index.md)
   * [SOAR](database/mysql/tool/soar/index.md)
