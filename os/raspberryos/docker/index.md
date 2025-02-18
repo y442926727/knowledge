@@ -154,6 +154,8 @@ docker exec -it 容器名字或容器ID grep 'Password:' /etc/gitlab/initial_roo
 
 查看容器：sudo docker ps
 
+删除容器：sudo docker rm -f abc123
+
  
 
 启动 docker 服务：sudo systemctl start docker
@@ -163,5 +165,7 @@ docker exec -it 容器名字或容器ID grep 'Password:' /etc/gitlab/initial_roo
 重启 docker 服务：sudo systemctl restart docker
 
 查看 docker 服务 状态：sudo systemctl status docker
+
+
 
 进入一个运行中的容器：sudo docker exec -it xx /bin/bash (xx可以是Id也可以是Name)

@@ -11,6 +11,8 @@ gpg --keyserver keyserver.ubuntu.com --recv-keys 9165938D90FDDD2E
 gpg --export --armor 9165938D90FDDD2E | sudo apt-key add -
 sudo apt-get update
 sudo apt-get upgrade
+#在shell窗口通过命令设置相关配置 如系统语言
+sudo raspi-config 
 ```
 
 开箱和安装&系统烧录、中文设置、拼音输入法安装和鼠标延迟问题解决等

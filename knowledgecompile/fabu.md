@@ -1,16 +1,27 @@
+# 前言
 
+学习时，都知道好记性不如烂笔头。但是在这个计算机信息时代，即使我们在只能纸质记录重要的信息后，也建议即时整理成电子记录存储在电脑中。主要一下几大好处：
 
-#  解决什么问题需要markdown
+1. 不因字迹潦草，以后无法辨别之前书写内容
 
-原来我们在记录笔记时通常是用word，或者更低级的txt。前者虽然可以编辑复杂的格式，但是为了将笔记的格式或样式排版的更美观，需要花掉我们大量的时间。后者不仅不能存放笔记图片，而且所有文字只能都是一个字体，内容更是没有主次和顺序之分。
+2. 易于修改调整，将原来记录不清的可以不断完善修改，不会像纸质需要涂涂改改
 
-而我们记笔记的目的，是着重于笔记内容本身，而非排版。
+3. 易于分享，很简单将信息传递给需要的人
 
-所以我们希望有能通过一个手段或者一个编辑工具，来实现我们。而Markdown应运而生，Markdown用简洁的语法代替排版，其是一种轻量级的标记语言，而我们使用的就是Typora 编辑器。
+4. 易于备份，可将内容在存储多个设备中
 
-所有知识库内容将用markdown标记语言编写，并用gitbook生成html在线教程，上传至CentOS服务器通过nginx访问。
+5. 等待其它很多优点
+
+故此，我们需要借助计算机这样的强大工具，记录我们所想所得。但是很多人并非计算机专业，对只需要记笔记的小伙伴来说，而学习word排版，甚至html的编写。犹如我只要骑自行车解决的问题，却要我去学开坦克甚至飞机，成本太高。
+
+这个世界不缺牛人来解决我们的痛点，一位外国牛人就为此创造一种轻量级标记语言==Markdown== ，它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者HTML）文档。
+
+如果你愿意将你的笔记或者文章，==制作成在线个人博客站==点发布到互联网上(免费利用github.io)，我也将一步步教你如何搭建。这里还需要nodejs、github等基础知识，其实也不难，下面我提供。
+
+>  涉及知识有点多，内容偏长，收藏查看更方便。
 
 # markdown
+
 ## 简介
 
 Markdown是一种轻量级的标记语言，它允许人们使用易读易写的纯文本格式编写文档，借助可实现快速排版且转换成格式丰富的HTML页面。目前被越来越多的写作爱好者及工作者使用。其语法十分简单，常用标记符号少，学习时间少，一旦掌握这种标记语言，将极大提高效率。但是若需要复杂排版如左右对齐缩进等，还是选择word等专业软件。
@@ -35,7 +46,7 @@ Markdown的优点
 
 ## 编写工具
 
-![这里写图片描述](index.assets/20180718161741325.png)
+![这里写图片描述](fabu.assets/20180718161741325.png)
 
 这里我推荐使用typora，因为它可以所以见即所得，不会像他编辑工具一样，左边编辑，右边预览。
 
@@ -51,9 +62,9 @@ markdown让我们程序员，在记录知识时省却了排版所浪费的时间
 
 Typora其实是将markdown转换成html展示给我们看的，而且默认层级显示是没有序号，只有字体大小。所以我们需要通过css让其显示序号，让笔记更有层次感。
 
-![img](index.assets/v2-5bd04595462b0e7ce983d375b1848dcf_720w.jpg)
+![img](fabu.assets/v2-5bd04595462b0e7ce983d375b1848dcf_720w.jpg)
 
-![image-20200411234533162](index.assets/image-20200411234533162.png)
+![image-20200411234533162](fabu.assets/image-20200411234533162.png)
 
 在主题文件夹下开创建base.user.css文件，复制粘贴一下css样式代码：
 
@@ -209,6 +220,7 @@ mark {
 
 ::selection { background-color: Lime; color: red;}
 ```
+
 # gitbook
 
 > [gitbook安装与使用（含常用插件和book.json配置详解）](https://blog.csdn.net/fghsfeyhdf/article/details/88403548)
@@ -228,14 +240,19 @@ mark {
 
 GitBook 是一个基于 Node.js 的命令行工具，下载安装 [Node.js](https://links.jianshu.com/go?to=https%3A%2F%2Fnodejs.org%2Fen)，安装完成之后，你可以使用下面的命令来检验是否安装成功。
 
-注意Node.js 对Gitbook存在兼容问题，截止2020年10月17日，LST版本为12.18.4，最新版13.9.0。建议用LTS版本。
+注意Node.js 对Gitbook存在兼容问题，截止2024年01月15日，LST版本为20.11.0，最新版21.5.0。建议用LTS版本。这是我个人以前发布的[NodeJS开发 · 学习笔记 (w-life.cn)](https://blog.w-life.cn/dev/nodejs/)如何windows下如何安装搭建nodejs环境。
+
+![image-20240115152214833](fabu.assets/image-20240115152214833.png)
 
 在https://nodejs.org/en/download/releases/中，可以查看所有Node.js版本。
 
 ```bash
 $ node -v
-v12.18.4
+#我本地的版本
+v16.15.1
 ```
+
+![1705303029912](fabu.assets/1705303029912.png)
 
 确认安装完node.js后再执行一下命令
 
@@ -253,7 +270,7 @@ gitbook -V
 
 注意：若输入上面命令后，提示Installing GitBook，时间较长，请耐心等待。
 
-![目录初始化](index.assets/Image 6.png)
+![目录初始化](fabu.assets/Image 6.png)
 
 ## 初使化目录
 
@@ -269,7 +286,11 @@ README.md 是对书籍的简单介绍
 
 SUMMARY.md 是书籍的目录结构
 
-![image-20200329110215911](index.assets/image-20200329110215911.png)
+![image-20200329110215911](fabu.assets/image-20200329110215911.png)
+
+其中路径就是相对路径，只支持两级目录
+
+![image-20240116003513366](fabu.assets/image-20240116003513366.png)
 
 ## 生成
 
@@ -289,7 +310,7 @@ gitbook build  ./md  ./out
 gitbook serve --port 8088
 ```
 
-[http://localhost:4000](http://localhost:4000/)
+[http://localhost:8088](http://localhost:8088/)
 
 ## 配置文件（不是必需的）
 
@@ -352,7 +373,7 @@ gitbook serve --port 8088
 
 上面配置好后，启动服务会报错，这样需要我们安装gitbook插件
 
-![image-20200329121416199](index.assets/image-20200329121416199.png)
+![image-20200329121416199](fabu.assets/image-20200329121416199.png)
 
 ## gitbook插件
 
@@ -363,7 +384,7 @@ gitbook serve --port 8088
 gitbook install
 ```
 
-![image-20200329122252439](index.assets/image-20200329122252439.png)
+![image-20200329122252439](fabu.assets/image-20200329122252439.png)
 
 ```bash
 #推荐使用（会使用nodejs镜像安装）
@@ -372,11 +393,11 @@ npm install gitbook-plugin-{插件名称}
 
 【提醒】因为gitbook项目不是标准的nodejs项目，所以安装会出现如下图警告，请不要理会。
 
-![image-20200412215136253](index.assets/image-20200412215136253.png)
+![image-20200412215136253](fabu.assets/image-20200412215136253.png)
 
 安装的插件都在当前目录下的node_modules文件夹下
 
-![image-20200329131508546](index.assets/image-20200329131508546.png)
+![image-20200329131508546](fabu.assets/image-20200329131508546.png)
 
 ```bash
 #所以可以插件目录下按需删除，对插件卸载。也可将整个文件夹删除卸载。
@@ -473,7 +494,7 @@ mark {
 
 ### 问题（warn"options"）
 
-![image-20200408220504981](index.assets/image-20200408220504981.png)
+![image-20200408220504981](fabu.assets/image-20200408220504981.png)
 
 该问题经过排除法和网络上类似问题描述，应该是所使用的插件版本自身某些语法规则不是最新的导致。
 
@@ -481,23 +502,91 @@ mark {
 
 需要首行空一行
 
-![image-20200412120421851](index.assets/image-20200412120421851.png)
+![image-20200412120421851](fabu.assets/image-20200412120421851.png)
 
 ### 问题（gitbook部署后相对路径资源文件404问题）
 
-![image-20200412125910036](index.assets/image-20200412125910036.png)
+![image-20200412125910036](fabu.assets/image-20200412125910036.png)
 
 这种资源文件提示404错误请忽略，这是因为gitbook布局不是用iframe，所以资源文件会在页面加载完后，js会再处理相对路径的资源文件。
 
 ### 构建或启动时报错
 
-![image-20200412221527283](index.assets/image-20200412221527283.png)
+![image-20200412221527283](fabu.assets/image-20200412221527283.png)
 
 如果出现类似这样的错误，就删除_book文件夹，重新执行命令即可。
 
 ### gitbook install 报错
 
-![image-20211031190000332](index.assets/image-20211031190000332.png)
+![image-20211031190000332](fabu.assets/image-20211031190000332.png)
 
-![image-20211031190118478](index.assets/image-20211031190118478.png)
+![image-20211031190118478](fabu.assets/image-20211031190118478.png)
+
+## 扩展
+
+gitbook在样式美观和左侧文章目录菜单层级等方面，都很简陋。现在vue大行其道，其官方团队基于vue开发出了一个 Vue 驱动的静态网站生成器，它就是[VuePress](https://vuepress.vuejs.org/zh/)，它允许开发者自定义，自己需要的主题样式。这里我发现了我比较喜欢[vuepress-theme-vdoing (xiaolongsu.cn)](https://vue-doc.xiaolongsu.cn/)主题样式，大家可以学习一下。
+
+下图是主题官网提供的一个案例，真的很漂亮。
+
+![image-20240116002324178](fabu.assets/image-20240116002324178.png)
+
+# Github Pages
+
+> 下面是ChatGPT给出的详细说明。我简单总结一下就是，将发布好的静态网站资源上传到仓库，然后在指定的生成的网址就可以在线fang'w
+
+GitHub Pages 是 GitHub 提供的一项服务，它允许用户在 GitHub 上托管和发布静态网站。GitHub Pages 可以用于展示个人、组织或项目的静态网页、文档、博客等内容。以下是关于 GitHub Pages 的一些关键信息：
+
+1. **静态网站：** GitHub Pages 专注于托管静态网站，这意味着您的网站主要由 HTML、CSS、JavaScript 和其他静态文件组成。动态内容、服务器端脚本或数据库驱动的内容通常不适合 GitHub Pages。
+2. **免费托管：** GitHub Pages 提供免费的托管服务。您可以使用 GitHub Pages 托管您的网站而无需支付额外费用。
+3. **仓库规则：** 您的 GitHub Pages 网站内容通常存储在特定的 GitHub 仓库中。对于用户或组织页面，仓库的名称必须是· 或 `<orgname>.github.io`，其中 `<username>` 是您的 GitHub 用户名，`<orgname>` 是您的 GitHub 组织名。
+4. **分支规则：** 默认情况下，GitHub Pages 使用 `gh-pages` 分支或 `master` 分支来托管网站内容。对于用户或组织页面，也可以使用 `main` 分支。
+5. **自定义域名：** 您可以将自定义域名与 GitHub Pages 配合使用，以便使用自己的域名访问网站。
+6. **支持 Jekyll：** GitHub Pages 支持使用 Jekyll，这是一个静态网站生成器，可以帮助您轻松构建博客和其他静态网站。
+7. **HTTPS 支持：** GitHub Pages 支持通过 HTTPS 访问，提供加密的连接。
+
+要使用 GitHub Pages，您可以在 GitHub 仓库的设置中找到相应的选项，并配置您的仓库和分支以启用 GitHub Pages 服务。可以在仓库的 Settings 页面的 "GitHub Pages" 部分找到有关配置和访问您网站的信息。
+
+> 这里需要git及github相关知识，在哔哩哔哩等视频网站有很多这方面的视频讲解。以下内容我都建立大家已经拥有了这块知识基础上。
+
+1. 建议静态资源仓库 
+
+   ![image-20240115231420468](fabu.assets/image-20240115231420468.png)
+
+   ![image-20240115231614075](fabu.assets/image-20240115231614075.png)
+
+   ![image-20240115231825726](fabu.assets/image-20240115231825726.png)
+
+   ![image-20240115232552077](fabu.assets/image-20240115232552077.png)
+
+   ![image-20240115233426554](fabu.assets/image-20240115233426554.png)
+
+   ![image-20240115233833071](fabu.assets/image-20240115233833071.png)
+
+2. 设置GitHub Pages
+
+   ![image-20240115234325699](fabu.assets/image-20240115234325699.png)
+
+   
+
+![image-20240115234644791](fabu.assets/image-20240115234644791.png)
+
+![image-20240115235130865](fabu.assets/image-20240115235130865.png)
+
+3. 扩展
+
+   如果你自己有域名的话，可将自己的域名指向这个github pages。以我拥有腾讯云名下的域名（w-life.cn）为例讲解。我定义一个“bk.w-life.cn”进行指向。
+
+   ![image-20240116000645519](fabu.assets/image-20240116000645519.png)
+
+![image-20240116000753521](fabu.assets/image-20240116000753521.png)
+
+![image-20240116000905290](fabu.assets/image-20240116000905290.png)
+
+# 结束语
+
+很多人会将自己的markdown知识笔记提交到github仓库进行存储，这样可以随时随地进行查看或修改自己的笔记。如果这样的话我们可以借助github中的[GitHub Actions 文档 - GitHub 文档](https://docs.github.com/zh/actions)持续集成服务来实现，将我们的markdown笔记push到github后，同时github会帮我们自动生成发布静态资源。
+
+其实这个很简单，就是在本地仓库建立好.github/workflows/page.yml，写好相应的脚本配置，将这个文件也push到github就可以了。网上这方面的脚本有很多，官方文档我也提供。如果大家还不清楚，欢迎留言或私信，我再写一篇这个主题的文章。
+
+笔记是都自己的理解总结，知识分享是对自己理解的梳理，也是成长的见证，也是希望广大小伙伴的指正。
 
